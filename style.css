@@ -420,6 +420,7 @@ nav.show div.icon-close{
      .swiper-slide {
        height: auto;
        padding: 4rem 1rem;
+       margin-bottom: -5rem;
      }
 
      .swiper-pagination-bullet-active {
