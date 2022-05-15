@@ -19,10 +19,11 @@ for (const link of links) {
 }
 
 /* MUDAR O HEADER DA PÁGINA QUANDO DER SCROLL */
+
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function () {
+function changeHeaderWhenScroll() {
   if (window.scrollY >= navHeight) {
     // Scroll é maior que a altura do header
     header.classList.add('scroll')
@@ -30,7 +31,7 @@ window.addEventListener('scroll', function () {
     // Menor que a altura do header
     header.classList.remove('scroll')
   }
-})
+}
 
 // TESTIMONIALS CAROUSEL SLIDER SWIPER
 const swiper = new Swiper('.swiper-container', {
@@ -39,14 +40,20 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  keyboard: true
+  keyboard: true,
+  breakpoints: {
+    767: {
+      slidesPerView: 2,
+      setWrapperSize: true
+    }
+  }
 })
 
 // ScrollReveal: Mostrar elementos quando der scroll na página
 const scrollReveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
-  duration: 700,
+  duration: 400,
   reset: true
 })
 
@@ -61,14 +68,40 @@ scrollReveal.reveal(
   { interval: 100 }
 )
 
-
-// BOTÃO VOLTAR PARA O TOPO            
+// BOTÃO VOLTAR PARA O TOPO
 
 const backToTopButton = document.querySelector('.back-to-top')
- window.addEventListener('scroll', function () {
-  if (window.scrollY >= 1000) {
+
+function backToTop() {
+
+  if (window.scrollY >= 560) {
     backToTopButton.classList.add('show')
   } else {
     backToTopButton.classList.remove('show')
   }
+}
+
+
+// MENU ATIVO CONFORME A SEÇÃO VISÍVEL NA PÁGINA
+const sections = document.querySelectorAll('main section[id]')
+function activateMenuAtCurrentSection() {
+
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
+  
+  for( const section of sections ) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId =  section.getAttribute('id')
+  }
+  
+}
+
+// QUANDO 'SCROLL'
+
+window.addEventListener('scroll', function () {
+  changeHeaderWhenScroll()
+  backToTop()
+  activateMenuAtCurrentSection()
 })
+
+
