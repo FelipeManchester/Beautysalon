@@ -38,7 +38,7 @@
     --subtitle-font-size: 1rem;
 
     --title-font: 'Poppins', sans-serif;
-    --body-font: 'Dm Sans', sans-serif;
+    --body-font: 'DM Sans', sans-serif;
  } 
  
  
@@ -124,7 +124,8 @@ html {
 .section header {
   margin-bottom: 4rem;
 }
-.section header strong{
+
+.section header strong {
   color: var(--base-color);
 }
 
@@ -156,7 +157,7 @@ html {
   }
   
   .logo span {
-    color:  var(--base-color);
+    color: var(--base-color);
   }
  
   .logo-alt span {
@@ -166,15 +167,14 @@ html {
  /*==== NAVIGATION ==========*/
 
  nav {
-   height:  var(--header-height);
+   height: var(--header-height);
    display: flex;
    align-items: center;
    justify-content: space-between;
-   width: 100%;
-   
+   width: 100%;   
  }
 
-nav ul li{
+nav ul li {
  text-align: center;
 }
 
@@ -189,7 +189,7 @@ nav ul li a.active {
 }
 
 nav ul li a::after {
-  content: "";
+  content: '';
   width: 0%;
   height: 2px;
   background: var(--base-color);
@@ -223,12 +223,14 @@ nav ul li a.active::after {
    visibility: visible;
 
    background: var(--body-color);
+
    height: 100vh;
    width: 100vw;
 
    position: fixed;
    top: 0;
    left: 0;
+
    display: grid;
    place-content: center;
  }
@@ -242,12 +244,13 @@ nav ul li a.active::after {
 }
 
 /*toggle menu*/
-.toggle{
+.toggle {
   color: var(--base-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
-nav .icon-close{
+
+nav .icon-close {
  visibility: hidden;
  opacity: 0;
 
@@ -258,7 +261,7 @@ nav .icon-close{
  transition: 0.2s;
 }
 
-nav.show div.icon-close{
+nav.show div.icon-close {
   visibility: visible;
   opacity: 1;
   top: 1.5rem;
@@ -288,7 +291,7 @@ nav.show div.icon-close{
    z-index: 0;
  }
  
- #home .image img{
+ #home .image img {
    position: relative;
    right: 2.93rem;
  }
@@ -304,7 +307,7 @@ nav.show div.icon-close{
    text-align: center;
  }
  
- #home .text h1{
+ #home .text h1 {
    margin-bottom: 1rem;
  }
  
@@ -336,7 +339,7 @@ nav.show div.icon-close{
     z-index: 0;
   }
   
-  #about .image img{
+  #about .image img {
     position: relative;
   }
   
@@ -359,8 +362,8 @@ nav.show div.icon-close{
     .card {
       padding: 3.625rem 2rem;
       box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-      border-bottom: .25rem solid var(--base-color);
-      border-radius: .25rem .25rem 0 0;
+      border-bottom: 0.25rem solid var(--base-color);
+      border-radius: 0.25rem 0.25rem 0 0;
       text-align: center;
     }
 
@@ -397,8 +400,8 @@ nav.show div.icon-close{
 
      #testimonials blockquote {
       padding: 2rem;
-      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.88);
-      border-radius: .25rem;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+      border-radius: 0.25rem;
      }
 
      #testimonials blockquote p {
@@ -409,7 +412,7 @@ nav.show div.icon-close{
      }
 
      #testimonials blockquote p span {
-       font: 700 3rem serif;
+       font: 700 2.5rem serif;
        position: absolute;
        top: -0.375rem;
        left: -1.875rem;
@@ -436,6 +439,11 @@ nav.show div.icon-close{
        height: auto;
        padding: 4rem 1rem;
      }
+
+     .swiper-pagination-bullet {
+      width: 0.75rem;
+      height: 0.75rem;
+    }
 
      .swiper-pagination-bullet-active {
        background: var(--base-color);
@@ -501,7 +509,7 @@ nav.show div.icon-close{
         display: inline-block;
       }
 
-      footer .social a:hover{
+      footer .social a:hover {
         transform: translateY(-8px);
       }
 
@@ -515,7 +523,7 @@ nav.show div.icon-close{
         right: 1rem;
         bottom: 1rem;
 
-        padding: 0.2rem;
+        padding: 0.5rem;
         clip-path: circle();
 
         font-size: 1.5rem;
@@ -652,7 +660,7 @@ nav.show div.icon-close{
 
                   /* FOOTER  */
            
-            footer .section {
+            footer.section {
               padding: 3.75rem 0;
             }
 
